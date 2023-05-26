@@ -217,7 +217,6 @@ int client_communication(const char *server_ip, int server_port, int peer_port)
     pthread_create(&recv_tid, NULL, recv_callback, (void *)(intptr_t)socket_fd);
     pthread_create(&chat_tid, NULL, chat_handler_callback, NULL);
     pthread_create(&file_tid, NULL, file_handler_callback, NULL);
-    pthread_create(&send_tid, NULL, send_callback, (void *)(intptr_t)socket_fd);
 
     return 0;
 }
