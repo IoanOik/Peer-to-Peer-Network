@@ -12,7 +12,7 @@ This project implements a peer-to-peer network that enables messaging and file s
 
 ## Usage
 
-1. Clone the repository: `git clone https://github.com/.git`
+1. Clone the repository: `git clone https://github.com/IoanOik/Peer-to-Peer-Network.git`
 2. Build the project: [Provide instructions for building the project, including any dependencies]
 
     2.1. Build the Sequencer: gcc sequencer.c DataStructs/List/LinkedList.c DataStructs/Node/Node.c -o sequencer.exe
