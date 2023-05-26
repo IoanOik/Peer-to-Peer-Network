@@ -29,4 +29,4 @@ The codebase is organized as follows:
 
 - `sequencer.c`: Implementation of the centralized sequencer program.
 - `peer.c`: Implementation of the peer program for message receiving and sending.
-- `DataStructs`: Implementation of the basic data structure elements required for this project implementation.
+- `DataStructs folder`: Implementation of the basic data structure elements required for this project implementation.
