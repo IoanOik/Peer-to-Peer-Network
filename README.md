@@ -21,7 +21,7 @@ This project implements a peer-to-peer network that enables messaging and file s
 
 3. Run the sequencer: ./sequencer.exe
 4. Run the peers: ./peer.exe [sequencer ip address] [sequencer port]
-5. Interact with the network: Follow the instuctions provided by the command line interface on peer program
+5. Interact with the network: Follow the instructions provided by the command line interface on peer program
 
 ## Code Structure
 
