@@ -19,10 +19,8 @@
 
 enum msg_type
 {
-    Begin_file = 0,
     File = 1,
-    Chat = 2,
-    eof = 3
+    Chat = 2
 };
 
 typedef struct chat_net_packet
