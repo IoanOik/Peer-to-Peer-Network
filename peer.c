@@ -113,10 +113,10 @@ int main(int argc, char const *argv[])
         permission = 1;
         pthread_cond_signal(&cv);
         pthread_cond_wait(&cv_2, &lock_console);
+        pthread_mutex_unlock(&lock_console);
         if (choice == 3)
             break;
     }
-    pthread_mutex_unlock(&lock_console);
     pthread_mutex_destroy(&lock_chat);
     pthread_mutex_destroy(&lock_queue);
     pthread_mutex_destroy(&lock_file);
@@ -217,7 +217,6 @@ int client_communication(const char *server_ip, int server_port, int peer_port)
     pthread_create(&recv_tid, NULL, recv_callback, (void *)(intptr_t)socket_fd);
     pthread_create(&chat_tid, NULL, chat_handler_callback, NULL);
     pthread_create(&file_tid, NULL, file_handler_callback, NULL);
-
     return 0;
 }
 
@@ -565,7 +564,7 @@ void send_file(int socket)
         memset(data, 0, sizeof(data));
         memset(buffer, 0, sizeof(buffer));
         memset(vclk, 0, sizeof(vclk));
-        //sleep(1);
+        sleep(1);
     }
     fclose(fp);
     remove("temp.txt");
